@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.AntiForgeryToken()
+
+<section class="centered">
+    <form asp-action="GetBoxes">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label center-block" style="display:block;margin:15% auto;">
+            <input class="mdl-textfield__input" type="text" autofocus id="codbar" name="codbar" pattern="[0-9]{14}" autocomplete="off">
+            <label class="mdl-textfield__label">Codbar</label>
+            <span class="mdl-textfield__error">El codbar ingresado no es válido</span>
+        </div>
+        <div class="centered">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect" style="display:block;margin:15% auto;">
+                <i class="material-icons">search</i>&nbsp;Buscar
+            </button>
+        </div>
+    </form>
+</section>

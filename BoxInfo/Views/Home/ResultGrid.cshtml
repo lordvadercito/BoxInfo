@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Resultados";
+}
+
+@model Box
+<div class="centered">
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp" id="result">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Caja @Model.Codbar</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <strong>Fecha de producción: </strong>@Model.FechaProduccion.ToString("dd/MM/yyyy")
+        <br />
+            <strong>Turno: </strong>@Model.Turno
+        <br />
+            <strong>Nro. Plan </strong>@Model.NroPlan
+        <br />
+            <strong>Nombre de Plan: </strong><br />@Model.NombrePlan
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a asp-action="index" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Regresar
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+<br />
+<div class="centered">
+    <button onclick="location.href = 'index'" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" style="display:block;margin:15% auto;">
+        Regresar
+    </button>
+</div>
